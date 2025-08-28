@@ -1,0 +1,27 @@
+# iMessage & FaceTime
+gateway.push.apple.com
+courier.push.apple.com
+courier.sandbox.push.apple.com
+init.push.apple.com
+init-courier.push.apple.com
+guzzoni.apple.com
+oscp.apple.com
+feedback.push.apple.com
+push.apple.com
+push-apple.com.akadns.net
+
+# Apple Push Notification Service (APNS)
+api.push.apple.com
+configuration.apple.com
+mesu.apple.com
+albert.apple.com
+lcdn-locator.apple.com
+
+17.57.144.0/22
+17.188.128.0/18
+17.172.224.0/19
+17.110.224.0/19
+17.130.0.0/16
+17.154.0.0/16
+17.171.0.0/16
+17.32.0.0/11
