@@ -1,0 +1,5 @@
+itunes.apple.com
+apps.apple.com
+mzstatic.com
+iosapps.itunes.apple.com
+itunes-apple.com.akadns.net
