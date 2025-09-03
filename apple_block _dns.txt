@@ -12,3 +12,5 @@ ess.apple.com
 api.push.apple.com
 gateway.push.apple.com
 *.gateway.push.apple.com
+xvpn.io
+8v9m.com
