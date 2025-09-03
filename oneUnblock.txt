@@ -3,3 +3,9 @@ apps.apple.com
 mzstatic.com
 iosapps.itunes.apple.com
 itunes-apple.com.akadns.net
+arcade.makecode.com
+makecode.com
+*.makecode.com
+makecode.microbit.org
+microbit.org
+*.microbit.org
