@@ -1,68 +1,196 @@
-! Converted from Arista Web Filter Block Sites JSON
-! Format: AdGuard Home DNS blocklist
-! Note: ||domain^ blocks the domain and its subdomains, so *.domain.com duplicates were removed.
+! ======================================================================
+! MaristBL Student DNS Safety Filter - AdGuard Home
+! Purpose: Student-safe DNS filtering with required school/learning services allowed
+! Updated: 2026-06-22
+!
+! Notes:
+! - Place this as your custom filter text file / GitHub-hosted blocklist.
+! - Allow rules are at the top and marked $important so they override later blocks.
+! - ||domain^ blocks the domain and all subdomains.
+! - This is DNS filtering only. It does not replace firewall rules, device management,
+!   browser policy, SafeSearch enforcement, or proper private IP addressing.
+! ======================================================================
 
-||store.steampowered.com^
-||roblox.com^
-||pornhub.com^
-||xvideos.com^
-||xhamster.com^
-||onlyfans.com^
-||redtube.com^
-||youporn.com^
-||tinder.com^
-||bumble.com^
-||omegle.com^
-||chatroulette.com^
-||discord.com^
-||snapchat.com^
-||tiktok.com^
-||reddit.com^
-||proxybay.info^
-||hidemyass.com^
-||vpnbook.com^
-||nordvpn.com^
-||expressvpn.com^
-||privateinternetaccess.com^
-||torproject.org^
-||duckduckgo.com^
-||megaupload.com^
-||thepiratebay.org^
-||1337x.to^
-||rarbg.to^
-||kickass.to^
-||tiktokv.com^
-||doh.dns.apple.com^
-||g10498469755.co^
-||applilink.jp^
-||netexplores.com^
-||tiktokcdn.com^
-||webfusiones.com^
-||tiktokcdn-us.com^
+
+! ======================================================================
+! CRITICAL ALLOWLIST - Google Workspace, Meet, Classroom, YouTube for education
+! ======================================================================
+
+! Google authentication and Workspace basics
+@@||accounts.google.com^$important
+@@||ssl.gstatic.com^$important
+@@||gstatic.com^$important
+@@||googleapis.com^$important
+@@||content.googleapis.com^$important
+@@||clients1.google.com^$important
+@@||clients2.google.com^$important
+@@||clients3.google.com^$important
+@@||clients4.google.com^$important
+@@||clients5.google.com^$important
+@@||clients6.google.com^$important
+@@||android.clients.google.com^$important
+@@||people-pa.googleapis.com^$important
+@@||firebaselogging-pa.googleapis.com^$important
+@@||firebaseinstallations.googleapis.com^$important
+@@||firebase-settings.crashlytics.com^$important
+
+! Google Meet / WebRTC / media transport
+@@||meet.google.com^$important
+@@||meetings.googleapis.com^$important
+@@||turn.googleapis.com^$important
+@@||stun.l.google.com^$important
+@@||stun1.l.google.com^$important
+@@||stun2.l.google.com^$important
+@@||stun3.l.google.com^$important
+@@||stun4.l.google.com^$important
+@@||googlevideo.com^$important
+@@||googleusercontent.com^$important
+@@||ggpht.com^$important
+@@||lh3.googleusercontent.com^$important
+@@||mail-attachment.googleusercontent.com^$important
+@@||googlehosted.l.googleusercontent.com^$important
+
+! Google Classroom / Drive / Docs / Forms / Slides / Gmail
+@@||classroom.google.com^$important
+@@||drive.google.com^$important
+@@||docs.google.com^$important
+@@||forms.google.com^$important
+@@||slides.google.com^$important
+@@||sheets.google.com^$important
+@@||mail.google.com^$important
+@@||gmail.com^$important
+@@||googlemail.com^$important
+@@||calendar.google.com^$important
+@@||admin.google.com^$important
+
+! YouTube allowed for education use
+@@||youtube.com^$important
+@@||youtube-nocookie.com^$important
+@@||ytimg.com^$important
+@@||youtu.be^$important
+@@||i.ytimg.com^$important
+@@||s.ytimg.com^$important
+
+! Google Play allowed only if needed for managed Android/Chromebook services
+! Remove this allow if students must not use Play Store.
+@@||play.google.com^$important
+@@||play.googleapis.com^$important
+
+
+! ======================================================================
+! CRITICAL ALLOWLIST - Approved learning / school tools
+! ======================================================================
+
+@@||canva.com^$important
+@@||makecode.com^$important
+@@||crosswordlabs.com^$important
+@@||life360.com^$important
+
+! WhatsApp API only, not full WhatsApp web/social browsing
+@@||api.whatsapp.net^$important
+@@||dit.whatsapp.net^$important
+@@||graph.whatsapp.com^$important
+
+
+! ======================================================================
+! LOCAL / INTERNAL BLOCKS
+! ======================================================================
+
+||wpad.maristbl.co.za^$important
+
+
+! ======================================================================
+! BLOCK - AI chatbots and AI writing tools
+! ======================================================================
+
+||chatgpt.com^$important
+||ws.chatgpt.com^$important
+||chat.openai.com^$important
+||openai.com^$important
+||api.openai.com^$important
+||auth.openai.com^$important
+||auth0.openai.com^$important
+||platform.openai.com^$important
+||oaistatic.com^$important
+||oaiusercontent.com^$important
+||openai.com.cdn.cloudflare.net^$important
+||claude.ai^
+||anthropic.com^
+||poe.com^
+||perplexity.ai^
+||character.ai^
+||c.ai^
+||you.com^
+||writesonic.com^
+||copy.ai^
+||jasper.ai^
+||quillbot.com^
+||smodin.io^
+||essaybot.com^
+||grammarlygo.com^
+
+
+! ======================================================================
+! BLOCK - Social media, short video, messaging distractions
+! ======================================================================
+
 ||facebook.com^
+||fb.com^
+||fbcdn.net^
+||fbsbx.com^
+||messenger.com^
 ||instagram.com^
+||cdninstagram.com^
 ||threads.net^
+||tiktok.com^
+||tiktokv.com^
+||tiktokcdn.com^
+||tiktokcdn-us.com^
+||tiktokcdn-eu.com^
+||snapchat.com^
+||snapcdn.com^
 ||x.com^
 ||twitter.com^
-||linkedin.com^
+||twimg.com^
+||reddit.com^
+||redd.it^
 ||pinterest.com^
-||youtube.com^
-||youtube-nocookie.com^
-||telegram.org^
-||wechat.com^
-||vk.com^
+||pinimg.com^
 ||tumblr.com^
-||beacons.ai^
-||linktr.ee^
-||clubhouse.com^
-||kwai.com^
-||bsky.app^
-||mastodon.social^
-||cdninstagram.com^
-||fbcdn.net^
-||snapcdn.com^
+||telegram.org^
+||t.me^
+||discord.com^
+||discord.gg^
+||discordapp.com^
 ||cdn.discordapp.com^
 ||media.discordapp.net^
+||wechat.com^
+||web.wechat.com^
+||vk.com^
+||bsky.app^
+||mastodon.social^
+||clubhouse.com^
+||kwai.com^
+||beacons.ai^
+||linktr.ee^
+||omegle.com^
+||ome.tv^
+||chatroulette.com^
+||monkey.app^
+||yubo.live^
+||kik.com^
+||ask.fm^
+||tellonym.me^
+||ngl.link^
+||curiouscat.live^
+||senditapp.com^
+
+
+! ======================================================================
+! BLOCK - Streaming, entertainment, music, non-educational video
+! YouTube infrastructure is allowed above for educational use.
+! ======================================================================
+
 ||netflix.com^
 ||nflximg.net^
 ||nflxvideo.net^
@@ -70,49 +198,230 @@
 ||disneyplus.com^
 ||hulu.com^
 ||primevideo.com^
+||amazonvideo.com^
 ||twitch.tv^
+||ttvnw.net^
 ||static-cdn.jtvnw.net^
-||crunchyroll.com^
+||kick.com^
 ||vimeo.com^
+||dailymotion.com^
+||crunchyroll.com^
 ||hbomax.com^
 ||max.com^
 ||apple-tv.com^
-||spotify.com^
-||scdn.co^
-||deezer.com^
-||soundcloud.com^
-||sndcdn.com^
-||audible.com^
 ||paramountplus.com^
 ||peacocktv.com^
 ||dazn.com^
 ||viu.com^
 ||plex.tv^
 ||stremio.com^
+||spotify.com^
+||scdn.co^
+||deezer.com^
+||soundcloud.com^
+||sndcdn.com^
+||audible.com^
 ||tidal.com^
-||ytimg.com^
-||googlevideo.com^
-||epicgames.com^
+||bandcamp.com^
+||iheartradio.com^
+
+
+! ======================================================================
+! BLOCK - Games and gaming platforms
+! ======================================================================
+
+||roblox.com^
+||rbxcdn.com^
+||store.steampowered.com^
 ||steamcommunity.com^
 ||steampowered.com^
+||steamstatic.com^
+||epicgames.com^
+||epicgames.dev^
+||fortnite.com^
+||unrealengine.com^
 ||ea.com^
 ||origin.com^
-||playstation.com^
-||xbox.com^
-||minecraft.net^
-||miniclip.com^
-||crazygames.com^
-||poki.com^
-||gameforge.com^
-||kongregate.com^
-||fortnite.com^
+||battle.net^
+||battlenet.com^
+||blizzard.com^
 ||riotgames.com^
 ||leagueoflegends.com^
 ||valorant.com^
 ||rockstargames.com^
-||battlenet.com^
 ||ubisoft.com^
+||playstation.com^
+||xbox.com^
+||minecraft.net^
+||mojang.com^
+||miniclip.com^
+||crazygames.com^
+||poki.com^
+||coolmathgames.com^
+||kongregate.com^
 ||newgrounds.com^
+||gameforge.com^
+||itch.io^
+||unity.com^
+||unity3d.com^
+||gameloft.com^
+||garena.com^
+||pubg.com^
+||pubgmobile.com^
+||callofduty.com^
+||activision.com^
+||nintendo.com^
+||pokemon.com^
+||chess.com^
+||lichess.org^
+
+
+! ======================================================================
+! BLOCK - Adult / explicit content
+! ======================================================================
+
+||pornhub.com^
+||xvideos.com^
+||xhamster.com^
+||xhamsterlive.com^
+||onlyfans.com^
+||redtube.com^
+||youporn.com^
+||xnxx.com^
+||sex.com^
+||spankbang.com^
+||youjizz.com^
+||tnaflix.com^
+||tube8.com^
+||fapster.xxx^
+||chaturbate.com^
+||stripchat.com^
+||bongacams.com^
+||camsoda.com^
+||cam4.com^
+||livejasmin.com^
+||myfreecams.com^
+||adultfriendfinder.com^
+||brazzers.com^
+||naughtyamerica.com^
+||hclips.com^
+||eporner.com^
+||porntrex.com^
+||drtuber.com^
+||efukt.com^
+||motherless.com^
+||erome.com^
+||redgifs.com^
+||hentaihaven.xxx^
+||nhentai.net^
+||hanime.tv^
+||rule34.xxx^
+||e621.net^
+
+
+! ======================================================================
+! BLOCK - Dating / hookup services
+! ======================================================================
+
+||tinder.com^
+||bumble.com^
+||grindr.com^
+||hinge.co^
+||badoo.com^
+||okcupid.com^
+||match.com^
+||pof.com^
+||zoosk.com^
+||ashleymadison.com^
+
+
+! ======================================================================
+! BLOCK - VPN, proxy, Tor, DNS bypass, iCloud Private Relay
+! ======================================================================
+
+||torproject.org^
+||bridges.torproject.org^
+||duckduckgo.com^
+||doh.dns.apple.com^
+||dns.google^
+||cloudflare-dns.com^
+||one.one.one.one^
+||quad9.net^
+||mask.icloud.com^
+||mask-h2.icloud.com^
+||mask-api.icloud.com^
+||hide.me^
+||hidemyass.com^
+||kproxy.com^
+||proxfree.com^
+||proxysite.com^
+||surfshark.com^
+||nordvpn.com^
+||expressvpn.com^
+||privateinternetaccess.com^
+||tunnelbear.com^
+||cyberghostvpn.com^
+||windscribe.com^
+||hotspotshield.com^
+||ultravpn.com^
+||securevpn.com^
+||vpnbook.com^
+||mullvad.net^
+||protonvpn.com^
+||ipvanish.com^
+||purevpn.com^
+||vyprvpn.com^
+||zenmate.com^
+||hola.org^
+||browsec.com^
+||psiphon.ca^
+||ultrasurf.us^
+||sslproxies.org^
+||publicproxyservers.com^
+||megaproxy.com^
+||zend2.com^
+||filterbypass.me^
+||proxybay.info^
+||croxyproxy.com^
+||hideip.me^
+
+
+! ======================================================================
+! BLOCK - Piracy, torrents, illegal streaming/downloads
+! ======================================================================
+
+||thepiratebay.org^
+||thepiratebay.se^
+||1337x.to^
+||rarbg.to^
+||kickass.to^
+||kickasstorrents.to^
+||yts.mx^
+||eztv.re^
+||limetorrents.lol^
+||torrentgalaxy.to^
+||torrentz2.nz^
+||zooqle.com^
+||nyaa.si^
+||fitgirl-repacks.site^
+||skidrowreloaded.com^
+||igg-games.com^
+||steamunlocked.net^
+||megaupload.com^
+||putlocker.to^
+||fmovies.to^
+||soap2day.rs^
+||123moviesfree.net^
+||gomovies.sx^
+||hdtoday.tv^
+||aniwave.to^
+||9anime.to^
+
+
+! ======================================================================
+! BLOCK - Gambling / betting
+! ======================================================================
+
 ||betway.co.za^
 ||hollywoodbets.net^
 ||supabets.co.za^
@@ -137,45 +446,61 @@
 ||unibet.com^
 ||gg.bet^
 ||pinnacle.com^
-||chaturbate.com^
-||stripchat.com^
-||bongacams.com^
-||camsoda.com^
-||cam4.com^
-||livejasmin.com^
-||myfreecams.com^
-||xhamsterlive.com^
-||sex.com^
-||fapster.xxx^
-||spankbang.com^
-||youjizz.com^
-||xnxx.com^
-||tnaflix.com^
-||tube8.com^
-||hide.me^
-||kproxy.com^
-||proxfree.com^
-||proxysite.com^
-||surfshark.com^
-||tunnelbear.com^
-||cyberghostvpn.com^
-||windscribe.com^
-||hotspotshield.com^
-||ultravpn.com^
-||securevpn.com^
-||sslproxies.org^
-||publicproxyservers.com^
-||megaproxy.com^
-||zend2.com^
-||filterbypass.me^
-||tiktokcdn-eu.com^
-||mask.icloud.com^
-||chat.openai.com^
-||openai.com^
-||platform.openai.com^
-||auth.openai.com^
-||api.openai.com^
-||oaistatic.com^
-||openai.com.cdn.cloudflare.net^
-||auth0.openai.com^
-||chatgpt.com^
+||sportingbet.com^
+||lotto247.com^
+||lottoland.com^
+||casino.com^
+||jackpotcitycasino.com^
+
+
+! ======================================================================
+! BLOCK - High-risk / malware-ish / suspicious domains from previous logs
+! ======================================================================
+
+||g10498469755.co^
+||applilink.jp^
+||netexplores.com^
+||webfusiones.com^
+
+
+! ======================================================================
+! BLOCK - Misc adult-adjacent, link farms, bypass/distraction hubs
+! ======================================================================
+
+||bitly.com^
+||tinyurl.com^
+||shorte.st^
+||adf.ly^
+||ouo.io^
+||clk.sh^
+||bc.vc^
+||linkvertise.com^
+
+
+! ======================================================================
+! OPTIONAL: Enable only if your school wants to block app stores entirely
+! Currently commented out because managed devices may need updates/apps.
+! ======================================================================
+
+! ||play.google.com^
+! ||apps.apple.com^
+! ||itunes.apple.com^
+! ||apps.microsoft.com^
+! ||store.microsoft.com^
+
+
+! ======================================================================
+! OPTIONAL: Enable only if YouTube must be completely blocked
+! Currently commented out because YouTube is often needed for school content.
+! If you enable these, Google Meet should still work because googlevideo.com is allowed above.
+! ======================================================================
+
+! ||youtube.com^
+! ||youtu.be^
+! ||youtube-nocookie.com^
+! ||ytimg.com^
+
+
+! ======================================================================
+! END OF FILE
+! ======================================================================
