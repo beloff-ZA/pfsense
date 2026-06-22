@@ -392,6 +392,17 @@
 ||bc.vc^
 ||linkvertise.com^
 
+||snapchat.com^
+||sc-cdn.net^
+||facebook.com^
+||googlesyndication.com^
+||googletagmanager.com^
+||ltwebstatic.com^
+||onefootball.com^
+||aalbtw.com^
+||itools.info^
+||revenuecat.com^
+
 ! ======================================================================
 ! END OF BLOCKLIST
 ! ======================================================================
