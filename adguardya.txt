@@ -62,6 +62,9 @@
 @@||s.ytimg.com^$important
 @@||play.google.com^$important
 @@||play.googleapis.com^$important
+@@||*.quizlet.com
+@@||blooket.com
+@@||*.blooket.com
 
 
 ! ======================================================================
