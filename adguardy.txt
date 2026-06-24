@@ -258,8 +258,6 @@
 ||torproject.org^
 ||bridges.torproject.org^
 ||duckduckgo.com^
-||doh.dns.apple.com^
-||dns.google^
 ||cloudflare-dns.com^
 ||one.one.one.one^
 ||quad9.net^
