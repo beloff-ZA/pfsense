@@ -400,6 +400,7 @@
 ||aalbtw.com^
 ||itools.info^
 ||revenuecat.com^
+||apple-dns.net^
 
 ! ======================================================================
 ! END OF BLOCKLIST
