@@ -401,6 +401,7 @@
 ||itools.info^
 ||revenuecat.com^
 ||apple-dns.net^
+||*.apple-dns.net^
 
 ! ======================================================================
 ! END OF BLOCKLIST
