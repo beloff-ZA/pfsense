@@ -78,6 +78,9 @@
 @@||api.whatsapp.net^$important
 @@||dit.whatsapp.net^$important
 @@||graph.whatsapp.com^$important
+@@||apple.com
+@@||*apple.com
+@@||icloud.com
 
 ! ======================================================================
 ! END OF ALLOWLIST
